@@ -1,0 +1,16 @@
+{
+    "name": "mouson/laradebut-demo02",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mouson",
+            "email": "mouson@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Mouson\\Helpers\\": "src\\Helpers"
+        }
+    }
+}
