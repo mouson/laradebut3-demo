@@ -19,3 +19,15 @@ $result = sprintf(
 );
 
 echo $result . PHP_EOL;
+
+$helper = SequenceHelper::make('Padovan');
+
+$value = 50;
+$result = sprintf(
+    "%s Sequence %d is %d",
+    $helper->getSequenceName(),
+    $value,
+    $helper->calculate($value)
+);
+
+echo $result . PHP_EOL;
