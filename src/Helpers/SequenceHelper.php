@@ -20,13 +20,9 @@ class SequenceHelper
      */
     static public function make($algorithm)
     {
-        switch ($algorithm) {
-            case 'Padovan':
-                return new PadovanSequenceCalculator();
-            case 'Fibonacci':
-            default :
-            return new FibonacciSequenceCalculator();
-            break;
-        }
+        $helper = 'Mouson\\Helpers\\SequenceCalculator\\' . $algorithm .
+                  "SequenceCalculator";
+
+        return new $helper;
     }
 }
