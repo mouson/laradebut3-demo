@@ -12,6 +12,11 @@ use Mouson\Helpers\SequenceCalculator\FibonacciSequenceCalculator;
 
 class SequenceHelper
 {
+    /**
+     * @param $algorithm
+     *
+     * @return FibonacciSequenceCalculator
+     */
     static public function make($algorithm)
     {
         switch ($algorithm) {
