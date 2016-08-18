@@ -18,13 +18,18 @@ class FibonacciSequenceCalculator implements CalculatorInterface
      */
     public function calculate($value)
     {
+        if (key_exists($value, self::$result)) {
+            return self::$result[$value];
+        }
         if ($value == 0) {
             return 0;
         }
         if ($value == 1) {
             return 1;
         }
-        return $this->calculate($value-1) + $this->calculate($value-2);
+        self::$result[$value] =
+            $this->calculate($value-1) + $this->calculate($value-2);
+        return self::$result[$value];
     }
 
     public function getSequenceName()
