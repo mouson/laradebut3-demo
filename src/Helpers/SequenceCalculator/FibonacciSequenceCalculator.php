@@ -8,7 +8,9 @@
 
 namespace Mouson\Helpers\SequenceCalculator;
 
-class FibonacciSequenceCalculator {
+class FibonacciSequenceCalculator implements CalculatorInterface
+{
+    private static $result = array();
     /**
      * @param $value
      *
@@ -23,13 +25,19 @@ class FibonacciSequenceCalculator {
          * f(1) = 1
          * f(n-1)+f(n-2)
          */
+        if (key_exists($value, self::$result)) {
+            return self::$result[$value];
+        }
+        
         if ($value == 0) {
             return 0;
         }
         if ($value == 1) {
             return 1;
         }
-        return $this->calculate($value-1) + $this->calculate($value-2);
+        self::$result[$value] =
+            $this->calculate($value-1) + $this->calculate($value-2);
+        return self::$result[$value];
     }
 
     public function getSequenceName()
