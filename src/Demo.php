@@ -9,6 +9,7 @@ include_once __DIR__ . '/../vendor/autoload.php';
 use Mouson\Helpers\SequenceHelper;
 
 /**
+<<<<<<< ddf428daad8af2d4a0f463e8f3a15ba229c8dd64
  * @param $helper
  * @param $value
  *
@@ -24,11 +25,17 @@ function getResult($helper, $value)
     );
 }
 
+/**
+ * 費式級數函式使用範例
+ */
 $helper = SequenceHelper::make('Fibonacci');
 $value = 22;
 $result = getResult($helper, $value);
 echo $result . PHP_EOL;
 
+/**
+ * 巴多萬級數函式使用範例
+ */
 $helper = SequenceHelper::make('Padovan');
 $value  = 50;
 $result = getResult($helper, $value);
