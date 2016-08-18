@@ -8,7 +8,9 @@
 
 namespace Mouson\Helpers\SequenceCalculator;
 
-class FibonacciSequenceCalculator {
+class FibonacciSequenceCalculator implements CalculatorInterface
+{
+    private static $result = array();
     /**
      * @param $value
      *
