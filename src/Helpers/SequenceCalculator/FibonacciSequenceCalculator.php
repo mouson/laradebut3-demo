@@ -8,7 +8,7 @@
 
 namespace Mouson\Helpers\SequenceCalculator;
 
-class FibonacciSequenceCalculator implements CalculateInterface {
+class FibonacciSequenceCalculator {
     /**
      * @param $value
      *
