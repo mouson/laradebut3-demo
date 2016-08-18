@@ -16,6 +16,13 @@ class FibonacciSequenceCalculator {
      */
     public function calculate($value)
     {
+        /**
+         * 公式：
+         *
+         * f(0) = 0
+         * f(1) = 1
+         * f(n-1)+f(n-2)
+         */
         if ($value == 0) {
             return 0;
         }
