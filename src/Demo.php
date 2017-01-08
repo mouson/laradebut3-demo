@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mouson
- * Date: 2016/7/11
- * Time: 上午1:53
- */
+
 include_once __DIR__ . '/../vendor/autoload.php';
 use Mouson\Helpers\SequenceHelper;
 
 /**
-<<<<<<< ddf428daad8af2d4a0f463e8f3a15ba229c8dd64
  * @param $helper
  * @param $value
  *
